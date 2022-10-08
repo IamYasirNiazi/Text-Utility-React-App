@@ -3,13 +3,13 @@ import './App.css';
 import Alerts from './components/Alerts';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-// import About from './components/About';
-// import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-// } from "react-router-dom";
+import About from './components/About';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
 
@@ -130,20 +130,20 @@ function App() {
 
   return (
     <>
-    {/* <Router> */}
+    <Router>
 
     <Navbar logo="TextUtils App" about="About Us" mode={mode} green={greenBtnFunc} red={redBtnFunc} dark={darkModeFunc} />
     <Alerts alert={alert} />
 
-    {/* <Routes> */}
-          {/* <Route path="/" element={ <TextForm heading="Enter Your Text" mode={mode} showAlert={showAlert} /> } /> */}
-          {/* <Route path="/about" element={ <About mode={mode} /> } /> */}
-    {/* </Routes> */}
+    <Routes>
+          <Route path="/" element={ <TextForm heading="Enter Your Text" mode={mode} showAlert={showAlert} /> } />
+          <Route path="/about" element={ <About mode={mode} /> } />
+    </Routes>
     
-    <TextForm heading="Enter Your Text" mode={mode} showAlert={showAlert} />
+    {/* <TextForm heading="Enter Your Text" mode={mode} showAlert={showAlert} /> */}
     {/* <About mode={mode} /> */}
 
-    {/* </Router> */}
+    </Router>
     </>
   );
 }
