@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@media (prefers-reduced-motion: reduce){
+  .accordion-button::after {
+      transition: none;
+      filter: contrast(80%) invert(80%) drop-shadow(2px 0px 25px white);
+  }
+}
