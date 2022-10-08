@@ -26,7 +26,20 @@ function App() {
     }, 1500);
   }
 
+  // const removecls = ()=>{
+  //   document.body.classList.remove('bg-danger');
+  //   document.body.classList.remove('bg-success');
+  //   document.body.classList.remove('bg-warning');
+  //   document.body.classList.remove('bg-primary');
+  // }
+
   const darkModeFunc = ()=>{
+    
+    // const darkModeFunc = (cls)=>{
+    // // removecls();
+    // console.log(cls);
+    // document.body.classList.add('bg-'+ cls)
+
     // document.title = 'TextUtils | Dark Mode';
     // setInterval(() => {
     // document.title = 'TextUtils | Dark Mode';

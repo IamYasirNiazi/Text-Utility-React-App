@@ -31,6 +31,9 @@ export default function Navbar(props) {
                     </form> */}
 
                     <div className='d-flex'>
+                    
+                    {/* <button className='btn btn-success' onClick={()=>{props.dark('success')}} style={{height: '20px', width: '20px'}}></button> */}
+                    
                     <input type="checkbox" className="btn-check" onClick={props.green} id="green-button" autocomplete="off" />
                     <label className="btn btn-sm btn-outline-success me-2" style={{backgroundColor: 'green', color: 'white'}}  for="green-button">Green Palette</label><br />
 
