@@ -74,7 +74,8 @@ export default function TextForm(props) {
     <div className="container my-3">
         <h2>Your Text Summary</h2>
         {/* {text.trim().length===0? text.trim().split(/[ ]+/).length-1 : text.trim().split(/[ ]+/).length } */}
-        <p>{text.split(/[ ]+/).filter((word)=>{ return word.length!==0 }).length } Words and {text.replace(/ /g, '').length} Characters in your Text.</p>
+        {/* {text.split(/[ ]+/).filter((word)=>{ return word.length!==0 }).length } Words and {text.replace(/ /g, '').length} Characters in your Text. */}
+        <p>{text.split(/\s+/).filter((word)=>{ return word.length!==0 }).length } Words and {text.replace(/\s+/g, '').length} Characters in your Text.</p>
         <p>{.008 * text.trim().length} Minutes required to read the whole Text.</p>
         <h3>Text Preview</h3>
         <p>{text.trim().length===0? "Enter Text to Preview" : text }</p>
