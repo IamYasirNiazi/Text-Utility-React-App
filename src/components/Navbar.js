@@ -17,8 +17,8 @@ export default function Navbar(props) {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                        <a className="nav-link active" style={{color: props.mode!=='light'? 'white' : 'black' }} aria-current="page" href="#">Home</a>
-                        {/* <Link className="nav-link active" style={{color: props.mode!=='light'? 'white' : 'black' }} aria-current="page" to="/">Home</Link> */}
+                        <a className="nav-link" style={{color: props.mode!=='light'? 'white' : 'black' }} aria-current="page" href="#">Home</a>
+                        {/* <Link className="nav-link" style={{color: props.mode!=='light'? 'white' : 'black' }} aria-current="page" to="/">Home</Link> */}
                         </li>
                         <li className="nav-item">
                         <a className="nav-link" style={{color: props.mode!=='light'? 'white' : 'black' }} href="#">{props.about}</a>
@@ -34,11 +34,11 @@ export default function Navbar(props) {
                     
                     {/* <button className='btn btn-success' onClick={()=>{props.dark('success')}} style={{height: '20px', width: '20px'}}></button> */}
                     
-                    <input type="checkbox" className="btn-check" onClick={props.green} id="green-button" autocomplete="off" />
-                    <label className="btn btn-sm btn-outline-success me-2" style={{backgroundColor: 'green', color: 'white'}}  for="green-button">Green Palette</label><br />
+                    <input type="checkbox" className="btn-check" onClick={props.green} id="green-button" autoComplete="off" />
+                    <label className="btn btn-sm btn-outline-success me-2" style={{backgroundColor: 'green', color: 'white'}}  htmlFor="green-button">Green Palette</label><br />
 
-                    <input type="checkbox" className="btn-check" onClick={props.red} name="options-outlined" id="red-button" autocomplete="off" />
-                    <label className="btn btn-sm btn-outline-danger me-3" style={{backgroundColor: 'red', color: 'white'}} for="red-button">Red Palette</label>
+                    <input type="checkbox" className="btn-check" onClick={props.red} name="options-outlined" id="red-button" autoComplete="off" />
+                    <label className="btn btn-sm btn-outline-danger me-3" style={{backgroundColor: 'red', color: 'white'}} htmlFor="red-button">Red Palette</label>
                     </div>
                     <div className="form-check form-switch">
                         <input className="form-check-input" type="checkbox" onClick={props.dark} role="switch" id="dark-button" />

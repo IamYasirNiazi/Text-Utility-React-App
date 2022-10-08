@@ -16,7 +16,7 @@ export default function TextForm(props) {
   }
 
   const capCaseFunc = ()=>{
-    const newText = text.trim().split(/[ ]+/);
+    const newText = text.trim().split(/\s+/);
 
     for (let i = 0; i < newText.length; i++) {
     newText[i] = newText[i].charAt(0).toUpperCase() + newText[i].slice(1).toLowerCase();
@@ -28,19 +28,16 @@ export default function TextForm(props) {
   }
 
   const removeSpacesFunc = ()=>{
-    const newText = text.trim().split(/[ ]+/).join(" ");
+    const newText = text.trim().split(/\s+/).join(" ");
     setText(newText)
-
-    // newText.select();
-    // navigator.clipboard.writeText(newText.value);
-    // document.getSelection().removeAllRanges();
     props.showAlert('success', 'Remove Extra Spaces Function is called');
   }
 
   const copyTextFunc = ()=>{
-    const newText = document.getElementById('textarea')
+    // const newText = document.getElementById('textarea')
     // newText.select();
-    navigator.clipboard.writeText(newText.value);
+    // navigator.clipboard.writeText(newText.value);
+    navigator.clipboard.writeText(text);
     // document.getSelection().removeAllRanges();
     props.showAlert('success', 'Copy Text Function is called');
   }
@@ -60,7 +57,7 @@ export default function TextForm(props) {
     <div className='container'>
         <h1 className='mb-3'>{props.heading}</h1>
         <div>
-            <textarea class="form-control" id="textarea" style={{backgroundColor: props.mode==='success'? '#027002' : props.mode==='danger'? '#df0000' : props.mode==='dark'? '#323232' : '#f9f9f9', color: props.mode!=='light'? 'white' : 'black' }} onChange={onChangeFunc} value={text} rows="8"></textarea>
+            <textarea className="form-control" id="textarea" style={{backgroundColor: props.mode==='success'? '#027002' : props.mode==='danger'? '#df0000' : props.mode==='dark'? '#323232' : '#f9f9f9', color: props.mode!=='light'? 'white' : 'black' }} onChange={onChangeFunc} value={text} rows="8"></textarea>
         </div>
     </div>
     <div className="container">
